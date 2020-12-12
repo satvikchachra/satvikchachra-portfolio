@@ -9,6 +9,7 @@ import NavigateCard from './components/Cards/NavigateCard/NavigateCard';
 import ProfileCard from './components/Cards/ProfileCard/ProfileCard';
 import BlogCard from './components/Cards/BlogCard/BlogCard';
 import ProjectCard from './components/Cards/ProjectCard/ProjectCard';
+import Footer from './components/Footer/Footer';
 import WebsiteIllustration from './assets/illustration-black-website.svg';
 import BlogIllustration from './assets/illustration-black-blog.svg';
 import './App.css';
@@ -77,10 +78,10 @@ const App = () => {
         <ProfileCard darkMode={isDarkModeOn} />
       </div>
       <div className="Blog-Section">
-        <BlogCard pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+        <BlogCard darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
       <div className="Blog-Section">
-        <BlogCard pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+        <BlogCard darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
     </div>
   );
@@ -109,6 +110,7 @@ const App = () => {
       {showHomePage && homePage}
       {showBlogPage && blogPage}
       {showProjectPage && projectPage}
+      <Footer darkMode={isDarkModeOn} />
     </div>
   )
 }

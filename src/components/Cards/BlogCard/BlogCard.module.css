@@ -7,14 +7,36 @@
 
 .CardBody {
     width: 260px;
+    padding: 0px 3px;
+}
+
+.CardDateTime {
+    padding: 0px 3px;
+    font-weight: 500;
+}
+
+.DarkBody {
+    color: #bdbdc3;
+}
+
+.DarkCard {
+    background-color: #292c34;
+}
+
+.ImgContainer {
+    padding: 20px;
 }
 
 .ImgContainer img {
-    width: 260px;
+    width: 220px;
 }
 
 .CardDescription {
     padding: 20px;
+}
+
+.DarkCardDateTime {
+    color: #c4b5b3;
 }
 
 @media (max-width: 736px) {

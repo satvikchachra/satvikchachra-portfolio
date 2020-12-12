@@ -8,6 +8,7 @@ import SocialProfiles from './components/SocialProfiles/SocialProfiles';
 import NavigateCard from './components/NavigateCard/NavigateCard';
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import BlogCard from './components/BlogCard/BlogCard';
+import ProjectCard from './components/ProjectCard/ProjectCard';
 import './App.css';
 
 const App = () => {
@@ -39,13 +40,28 @@ const App = () => {
         <BlogCard />
       </div>
     </div>
-  )
+  );
+
+  const projectPage = (
+    <div>
+      <div className="Profile-Section">
+        <ProfileCard />
+      </div>
+      <div className="Project-Section">
+        <ProjectCard />
+      </div>
+      <div className="Project-Section">
+        <ProjectCard />
+      </div>
+    </div>
+  );
 
   return (
     <div className="App">
       <Navbar />
       {/* {homePage} */}
-      {blogPage}
+      {/* {blogPage} */}
+      {projectPage}
     </div>
   )
 }

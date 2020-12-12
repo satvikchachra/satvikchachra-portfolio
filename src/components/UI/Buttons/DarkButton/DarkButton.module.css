@@ -1,0 +1,8 @@
+.DarkButton {
+    margin: 0px 10px 0px 0px;
+    background-color: #000000;
+    color: #ffffff;
+    height: 40px;
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+}

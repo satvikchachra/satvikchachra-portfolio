@@ -17,6 +17,7 @@ const App = () => {
   const [showHomePage, setShowHomePage] = useState(true);
   const [showProjectPage, setShowProjectPage] = useState(false);
   const [showBlogPage, setShowBlogPage] = useState(false);
+  const [isDarkModeOn, setIsDarkModeOn] = useState(false);
 
   useEffect(() => {
     window.scrollTo({
@@ -50,18 +51,22 @@ const App = () => {
       setShowProjectPage(false);
   };
 
+  const toggleModeHandler = () => {
+    setIsDarkModeOn(!isDarkModeOn);
+  };
+
   const homePage = (
     <div>
       <ProfileImage ht="150px" wd="150px" />
-      <NameHeader />
-      <BriefDescription />
+      <NameHeader darkMode={isDarkModeOn} />
+      <BriefDescription darkMode={isDarkModeOn} />
       <ContactMe />
-      <SocialProfiles />
+      <SocialProfiles darkMode={isDarkModeOn} />
       <div className="Navigation-Section">
-        <NavigateCard clicked={navigateToProjectPageHandler} title="Projects" body="Personal projects on web development." pic={WebsiteIllustration} />
+        <NavigateCard darkMode={isDarkModeOn} clicked={navigateToProjectPageHandler} title="Projects" body="Personal projects on web development." pic={WebsiteIllustration} />
       </div>
       <div className="Navigation-Section">
-        <NavigateCard clicked={navigateToBlogPageHandler} title="Blogs" body="Personal blogs on web development." pic={BlogIllustration} />
+        <NavigateCard darkMode={isDarkModeOn} clicked={navigateToBlogPageHandler} title="Blogs" body="Personal blogs on web development." pic={BlogIllustration} />
       </div>
     </div>
   );
@@ -94,9 +99,13 @@ const App = () => {
     </div>
   );
 
+  let classArray = "App";
+  if (isDarkModeOn)
+    classArray = "App Dark";
+
   return (
-    <div className="App">
-      <Navbar clicked={navigateToHomePageHandler} />
+    <div className={classArray}>
+      <Navbar clicked={navigateToHomePageHandler} darkMode={isDarkModeOn} toggler={toggleModeHandler} />
       {showHomePage && homePage}
       {showBlogPage && blogPage}
       {showProjectPage && projectPage}

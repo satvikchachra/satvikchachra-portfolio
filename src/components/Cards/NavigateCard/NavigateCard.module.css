@@ -7,16 +7,28 @@
     cursor: pointer;
 }
 
-.CardBody{
+.CardBody {
     width: 260px;
 }
 
-.ImgContainer img{
+.ImgContainer img {
     width: 260px;
 }
 
 .CardDescription {
-    padding: 20px;
+    padding: 30px;
+}
+
+.DarkTitle {
+    color: #d3cecc;
+}
+
+.DarkBody {
+    color: #bdbdc3;
+}
+
+.DarkCard{
+    background-color: #292c34;
 }
 
 @media (max-width: 736px) {
@@ -24,5 +36,14 @@
         display: block;
         width: 260px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    .CardDescription {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .CardDescription {
+        padding: 10px;
     }
 }

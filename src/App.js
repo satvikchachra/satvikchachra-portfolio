@@ -7,6 +7,7 @@ import ContactMe from './components/ContactMe/ContactMe';
 import SocialProfiles from './components/SocialProfiles/SocialProfiles';
 import NavigateCard from './components/NavigateCard/NavigateCard';
 import ProfileCard from './components/ProfileCard/ProfileCard';
+import BlogCard from './components/BlogCard/BlogCard';
 import './App.css';
 
 const App = () => {
@@ -30,6 +31,12 @@ const App = () => {
     <div>
       <div className="Profile-Section">
         <ProfileCard />
+      </div>
+      <div className="Blog-Section">
+        <BlogCard />
+      </div>
+      <div className="Blog-Section">
+        <BlogCard />
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import DarkButton from '../../UI/Buttons/DarkButton/DarkButton';
 import LightButton from '../../UI/Buttons/LightButton/LightButton';
 import classes from './ProjectCard.module.css';
 
-const ProjectCard = () => {
+const ProjectCard = props => {
     return (
         <div className={classes.Card}>
             <div className={classes.ImgContainer}>
@@ -12,18 +12,18 @@ const ProjectCard = () => {
             </div>
             <div className={classes.CardDescription}>
                 <div className={classes.CardTitle}>
-                    Projects
+                    {props.title}
                 </div>
                 <p className={classes.CardBody}>
                     Personal projects on web development.
                 </p>
 
                 <div className={classes.CardButtons}>
-                    <DarkButton />
-                    <LightButton />
+                    <DarkButton hostedURL={props.hostedURL} />
+                    <LightButton githubURL={props.githubURL} />
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 };
 

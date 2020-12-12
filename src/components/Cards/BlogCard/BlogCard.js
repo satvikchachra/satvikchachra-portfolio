@@ -1,27 +1,26 @@
 import React from 'react';
-import WebsiteIllustration from '../../../assets/illustration-black-website.svg';
 import classes from './BlogCard.module.css';
 
-const BlogCard = () => {
+const BlogCard = props => {
     return (
         <div className={classes.Card}>
             <div className={classes.ImgContainer}>
-                <img alt="blog" src={WebsiteIllustration} width="100%" />
+                <img alt="blog" src={props.pic} width="100%" />
             </div>
             <div className={classes.CardDescription}>
                 <div className={classes.CardTitle}>
-                    Blog Title
+                    {props.title}
                 </div>
                 <p className={classes.CardBody}>
-                    Personal blogs on web development.
+                    {props.body}
                 </p>
 
                 <div className={classes.CardDateTime}>
                     <div>
-                        December 12, 2020
-                </div>
+                        {props.date}
+                    </div>
                     <div>
-                        4 min read
+                        {props.time} read
                 </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './DarkButton.module.css';
 
-const DarkButton = () => {
+const DarkButton = props => {
     return (
         <button className={classes.DarkButton}>
-            Live Demo
+            <a href={props.hostedURL} target="_blank" rel="noreferrer">Live Demo</a>
         </button>
     )
 };

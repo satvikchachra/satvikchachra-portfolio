@@ -24,7 +24,7 @@ const App = () => {
       left: 0,
       behavior: 'smooth'
     });
-  }, [showHomePage, showProjectPage, showBlogPage])
+  }, [showHomePage, showProjectPage, showBlogPage]);
 
   const navigateToProjectPageHandler = () => {
     setShowProjectPage(true);
@@ -72,10 +72,10 @@ const App = () => {
         <ProfileCard />
       </div>
       <div className="Blog-Section">
-        <BlogCard />
+        <BlogCard pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
       <div className="Blog-Section">
-        <BlogCard />
+        <BlogCard pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
     </div>
   );
@@ -86,10 +86,10 @@ const App = () => {
         <ProfileCard />
       </div>
       <div className="Project-Section">
-        <ProjectCard />
+        <ProjectCard pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
       </div>
       <div className="Project-Section">
-        <ProjectCard />
+        <ProjectCard pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
       </div>
     </div>
   );

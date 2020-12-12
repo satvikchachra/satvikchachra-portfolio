@@ -1,0 +1,52 @@
+.NavbarContainer {
+    padding: 50px 200px 0px 200px;
+    /* width: inherit;
+    position: fixed;
+    top: 0; */
+}
+
+.NavLinks {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.Logo {
+    float: left;
+}
+
+.PortfolioLink, .ToggleMode {
+    float: right;
+    margin-left: 30px;
+}
+
+@media (max-width: 1010px) {
+    .NavbarContainer {
+        padding: 50px 100px 0px 100px;
+    }
+}
+
+@media (max-width: 769px) {
+    .NavbarContainer {
+        padding: 50px 85px 0px 85px;
+    }
+}
+
+@media (max-width: 541px) {
+    .NavbarContainer {
+        padding: 50px 55px 0px 55px;
+    }
+}
+
+@media (max-width: 376px) {
+    .NavbarContainer {
+        padding: 50px 50px 0px 50px;
+    }
+}
+
+@media (max-width: 320px) {
+    .NavbarContainer {
+        padding: 50px 30px 0px 30px;
+    }
+}

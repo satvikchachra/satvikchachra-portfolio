@@ -5,10 +5,10 @@ import NameHeader from './components/NameHeader/NameHeader';
 import BriefDescription from './components/BriefDescription/BriefDescription';
 import ContactMe from './components/ContactMe/ContactMe';
 import SocialProfiles from './components/SocialProfiles/SocialProfiles';
-import NavigateCard from './components/NavigateCard/NavigateCard';
-import ProfileCard from './components/ProfileCard/ProfileCard';
-import BlogCard from './components/BlogCard/BlogCard';
-import ProjectCard from './components/ProjectCard/ProjectCard';
+import NavigateCard from './components/Cards/NavigateCard/NavigateCard';
+import ProfileCard from './components/Cards/ProfileCard/ProfileCard';
+import BlogCard from './components/Cards/BlogCard/BlogCard';
+import ProjectCard from './components/Cards/ProjectCard/ProjectCard';
 import './App.css';
 
 const App = () => {
@@ -59,9 +59,9 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      {/* {homePage} */}
+      {homePage}
       {/* {blogPage} */}
-      {projectPage}
+      {/* {projectPage} */}
     </div>
   )
 }

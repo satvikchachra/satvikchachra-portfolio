@@ -1,5 +1,5 @@
 import React from 'react';
-import WebsiteIllustration from '../../assets/illustration-black-website.svg';
+import WebsiteIllustration from '../../../assets/illustration-black-website.svg';
 // import BlogIllustration from '../../assets/illustration-black-blog.svg';
 import classes from './NavigateCard.module.css';
 

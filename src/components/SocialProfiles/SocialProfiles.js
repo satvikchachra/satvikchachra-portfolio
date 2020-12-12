@@ -5,10 +5,10 @@ import classes from './SocialProfiles.module.css';
 const SocialProfiles = () => {
     return (
         <div className={classes.Container}>
-            <AiFillGithub size="20px" className={classes.SocialHandles} />
-            <AiOutlineTwitter size="20px" className={classes.SocialHandles} />
-            <AiFillLinkedin size="20px" className={classes.SocialHandles} />
-            <AiFillYoutube size="20px" className={classes.SocialHandles} />
+            <a href="https://github.com/satvikchachra" target="_blank" rel="noreferrer"><AiFillGithub size="20px" className={classes.SocialHandles} /></a>
+            <a href="https://twitter.com/satvikchachra19" target="_blank" rel="noreferrer"><AiOutlineTwitter size="20px" className={classes.SocialHandles} /></a>
+            <a href="https://www.linkedin.com/in/satvikchachra/" target="_blank" rel="noreferrer"><AiFillLinkedin size="20px" className={classes.SocialHandles} /></a>
+            <a href="https://www.youtube.com/channel/UCIbkmb0A8C8ARlX24L5e7xA" target="_blank" rel="noreferrer"><AiFillYoutube size="20px" className={classes.SocialHandles} /></a>
         </div>
     )
 };

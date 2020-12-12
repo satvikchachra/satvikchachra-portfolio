@@ -1,5 +1,5 @@
 import React from 'react';
-import WebsiteIllustration from '../../assets/illustration-black-website.svg';
+import WebsiteIllustration from '../../../assets/illustration-black-website.svg';
 import classes from './BlogCard.module.css';
 
 const BlogCard = () => {

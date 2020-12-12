@@ -1,6 +1,12 @@
-.Container{
+.Container {
     margin: 30px;
 }
+
+.Container a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .SocialHandles {
     margin: 0px 18px;
 }

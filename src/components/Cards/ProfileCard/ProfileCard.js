@@ -1,6 +1,6 @@
 import React from 'react';
-import BriefDescription from '../BriefDescription/BriefDescription';
-import ProfileImage from '../ProfileImage/ProfileImage';
+import BriefDescription from '../../BriefDescription/BriefDescription';
+import ProfileImage from '../../ProfileImage/ProfileImage';
 import classes from './ProfileCard.module.css';
 
 const ProfileCard = () => {

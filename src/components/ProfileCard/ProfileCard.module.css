@@ -1,0 +1,14 @@
+.Card {
+    display: flex;
+    padding: 0 20px;
+}
+.BriefDescription{
+    margin: auto 0;
+    padding: 0 0;
+    font-size: 13px;
+}
+@media (max-width: 424px){
+    .Card{
+        display: none;
+    }
+}

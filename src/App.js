@@ -6,12 +6,12 @@ import BriefDescription from './components/BriefDescription/BriefDescription';
 import ContactMe from './components/ContactMe/ContactMe';
 import SocialProfiles from './components/SocialProfiles/SocialProfiles';
 import NavigateCard from './components/NavigateCard/NavigateCard';
+import ProfileCard from './components/ProfileCard/ProfileCard';
 import './App.css';
 
 const App = () => {
-  return (
-    <div className="App">
-      <Navbar />
+  const homePage = (
+    <div>
       <ProfileImage ht="150px" wd="150px" />
       <NameHeader />
       <BriefDescription />
@@ -23,6 +23,22 @@ const App = () => {
       <div className="Navigation-Section">
         <NavigateCard />
       </div>
+    </div>
+  );
+
+  const blogPage = (
+    <div>
+      <div className="Profile-Section">
+        <ProfileCard />
+      </div>
+    </div>
+  )
+
+  return (
+    <div className="App">
+      <Navbar />
+      {/* {homePage} */}
+      {blogPage}
     </div>
   )
 }

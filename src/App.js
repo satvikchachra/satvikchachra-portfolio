@@ -5,6 +5,7 @@ import NameHeader from './components/NameHeader/NameHeader';
 import BriefDescription from './components/BriefDescription/BriefDescription';
 import ContactMe from './components/ContactMe/ContactMe';
 import SocialProfiles from './components/SocialProfiles/SocialProfiles';
+import NavigateCard from './components/NavigateCard/NavigateCard';
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,12 @@ const App = () => {
       <BriefDescription />
       <ContactMe />
       <SocialProfiles />
+      <div className="Navigation-Section">
+        <NavigateCard />
+      </div>
+      <div className="Navigation-Section">
+        <NavigateCard />
+      </div>
     </div>
   )
 }

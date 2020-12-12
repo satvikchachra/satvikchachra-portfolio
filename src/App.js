@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import ProfileImage from './components/ProfileImage/ProfileImage';
 import NameHeader from './components/NameHeader/NameHeader';
@@ -9,9 +9,47 @@ import NavigateCard from './components/Cards/NavigateCard/NavigateCard';
 import ProfileCard from './components/Cards/ProfileCard/ProfileCard';
 import BlogCard from './components/Cards/BlogCard/BlogCard';
 import ProjectCard from './components/Cards/ProjectCard/ProjectCard';
+import WebsiteIllustration from './assets/illustration-black-website.svg';
+import BlogIllustration from './assets/illustration-black-blog.svg';
 import './App.css';
 
 const App = () => {
+  const [showHomePage, setShowHomePage] = useState(true);
+  const [showProjectPage, setShowProjectPage] = useState(false);
+  const [showBlogPage, setShowBlogPage] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [showHomePage, showProjectPage, showBlogPage])
+
+  const navigateToProjectPageHandler = () => {
+    setShowProjectPage(true);
+    if (showHomePage)
+      setShowHomePage(false);
+    if (showBlogPage)
+      setShowBlogPage(false);
+  };
+
+  const navigateToBlogPageHandler = () => {
+    setShowBlogPage(true);
+    if (showHomePage)
+      setShowHomePage(false);
+    if (showProjectPage)
+      setShowProjectPage(false);
+  };
+
+  const navigateToHomePageHandler = () => {
+    setShowHomePage(true);
+    if (showBlogPage)
+      setShowBlogPage(false);
+    if (showProjectPage)
+      setShowProjectPage(false);
+  };
+
   const homePage = (
     <div>
       <ProfileImage ht="150px" wd="150px" />
@@ -20,10 +58,10 @@ const App = () => {
       <ContactMe />
       <SocialProfiles />
       <div className="Navigation-Section">
-        <NavigateCard />
+        <NavigateCard clicked={navigateToProjectPageHandler} title="Projects" body="Personal projects on web development." pic={WebsiteIllustration} />
       </div>
       <div className="Navigation-Section">
-        <NavigateCard />
+        <NavigateCard clicked={navigateToBlogPageHandler} title="Blogs" body="Personal blogs on web development." pic={BlogIllustration} />
       </div>
     </div>
   );
@@ -58,10 +96,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
-      {homePage}
-      {/* {blogPage} */}
-      {/* {projectPage} */}
+      <Navbar clicked={navigateToHomePageHandler} />
+      {showHomePage && homePage}
+      {showBlogPage && blogPage}
+      {showProjectPage && projectPage}
     </div>
   )
 }

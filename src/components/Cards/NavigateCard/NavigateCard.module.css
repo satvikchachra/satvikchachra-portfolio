@@ -3,6 +3,11 @@
     transition: 0.3s;
     border-radius: 5px;
     display: flex;
+    padding: 10px;
+}
+
+.CardBody{
+    width: 260px;
 }
 
 .ImgContainer img{

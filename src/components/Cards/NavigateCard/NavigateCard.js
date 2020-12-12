@@ -1,21 +1,19 @@
 import React from 'react';
-import WebsiteIllustration from '../../../assets/illustration-black-website.svg';
-// import BlogIllustration from '../../assets/illustration-black-blog.svg';
 import classes from './NavigateCard.module.css';
 
 
-const NavigateCard = () => {
+const NavigateCard = props => {
     return (
-        <div className={classes.Card}>
+        <div onClick={() => props.clicked()} className={classes.Card}>
             <div className={classes.ImgContainer}>
-                <img alt="Navigation Section" src={WebsiteIllustration} width="100%" />
+                <img alt="Navigation Section" src={props.pic} width="100%" />
             </div>
             <div className={classes.CardDescription}>
                 <div className={classes.CardTitle}>
-                    Projects
+                    {props.title}
                 </div>
                 <p className={classes.CardBody}>
-                    Personal projects on web development.
+                    {props.body}
                 </p>
             </div>
             {/* <img src={BlogIllustration} height="300px" width="300px" />

@@ -5,16 +5,22 @@ import LightButton from '../../UI/Buttons/LightButton/LightButton';
 import classes from './ProjectCard.module.css';
 
 const ProjectCard = props => {
+    let cardDarkClassArray = classes.Card;
+    let cardBodyClassArray = classes.CardBody;
+    if (props.darkMode) {
+        cardBodyClassArray = [classes.CardBody, classes.DarkBody].join(' ');
+        cardDarkClassArray = [classes.Card, classes.DarkCard].join(' ');
+    }
     return (
-        <div className={classes.Card}>
+        <div className={cardDarkClassArray}>
             <div className={classes.ImgContainer}>
                 <img alt="project" src={WebsiteIllustration} width="100%" />
             </div>
             <div className={classes.CardDescription}>
                 <div className={classes.CardTitle}>
-                    {props.title}
+                    <h3 style={props.darkMode ? { color: "#d3cecc" } : null}>{props.title}</h3>
                 </div>
-                <p className={classes.CardBody}>
+                <p className={cardBodyClassArray}>
                     Personal projects on web development.
                 </p>
 

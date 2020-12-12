@@ -74,7 +74,7 @@ const App = () => {
   const blogPage = (
     <div>
       <div className="Profile-Section">
-        <ProfileCard />
+        <ProfileCard darkMode={isDarkModeOn} />
       </div>
       <div className="Blog-Section">
         <BlogCard pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
@@ -88,13 +88,13 @@ const App = () => {
   const projectPage = (
     <div>
       <div className="Profile-Section">
-        <ProfileCard />
+        <ProfileCard darkMode={isDarkModeOn} />
       </div>
       <div className="Project-Section">
-        <ProjectCard pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
+        <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
       </div>
       <div className="Project-Section">
-        <ProjectCard pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
+        <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
       </div>
     </div>
   );

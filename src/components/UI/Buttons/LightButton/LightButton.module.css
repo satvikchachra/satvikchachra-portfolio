@@ -5,6 +5,7 @@
     height: 40px;
     width: 100px;
     font-family: 'Roboto', sans-serif;
+    border: 2px solid #000000;
 }
 
 a {

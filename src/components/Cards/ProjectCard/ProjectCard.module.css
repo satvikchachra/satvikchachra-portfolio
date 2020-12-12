@@ -3,6 +3,12 @@
     transition: 0.3s;
     border-radius: 5px;
     display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+h3{
+    margin: 0;
+    padding: 0px 3px;
 }
 
 .Card a {
@@ -12,10 +18,23 @@
 
 .CardBody {
     width: 260px;
+    padding: 0px 3px;
+}
+
+.DarkBody {
+    color: #bdbdc3;
+}
+
+.DarkCard {
+    background-color: #292c34;
+}
+
+.ImgContainer{
+    padding: 20px;
 }
 
 .ImgContainer img {
-    width: 260px;
+    width: 220px;
 }
 
 .CardDescription {
@@ -30,6 +49,6 @@
     .Card {
         display: block;
         width: 260px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     }
 }

@@ -1,0 +1,9 @@
+.DisplayPicture{
+    box-shadow: 0px 0px 20px 8px #e5e4e2;
+    border-radius: 50%;
+}
+
+.DisplayPictureContainer{
+    margin: 40px 0px;
+    padding: 0px 30px;
+}

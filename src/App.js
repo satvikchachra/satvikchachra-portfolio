@@ -16,8 +16,9 @@ import './App.css';
 
 const App = () => {
   const [showHomePage, setShowHomePage] = useState(true);
-  const [showProjectPage, setShowProjectPage] = useState(false);
-  const [showBlogPage, setShowBlogPage] = useState(false);
+  const [showProjectListPage, setShowProjectListPage] = useState(false);
+  const [showBlogListPage, setShowBlogListPage] = useState(false);
+  // const [showBlogReadPage, setShowBlogReadPage] = useState(false);
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
 
   useEffect(() => {
@@ -26,30 +27,30 @@ const App = () => {
       left: 0,
       behavior: 'smooth'
     });
-  }, [showHomePage, showProjectPage, showBlogPage]);
+  }, [showHomePage, showProjectListPage, showBlogListPage]);
 
   const navigateToProjectPageHandler = () => {
-    setShowProjectPage(true);
+    setShowProjectListPage(true);
     if (showHomePage)
       setShowHomePage(false);
-    if (showBlogPage)
-      setShowBlogPage(false);
+    if (showBlogListPage)
+      setShowBlogListPage(false);
   };
 
   const navigateToBlogPageHandler = () => {
-    setShowBlogPage(true);
+    setShowBlogListPage(true);
     if (showHomePage)
       setShowHomePage(false);
-    if (showProjectPage)
-      setShowProjectPage(false);
+    if (showProjectListPage)
+      setShowProjectListPage(false);
   };
 
   const navigateToHomePageHandler = () => {
     setShowHomePage(true);
-    if (showBlogPage)
-      setShowBlogPage(false);
-    if (showProjectPage)
-      setShowProjectPage(false);
+    if (showBlogListPage)
+      setShowBlogListPage(false);
+    if (showProjectListPage)
+      setShowProjectListPage(false);
   };
 
   const toggleModeHandler = () => {
@@ -72,7 +73,7 @@ const App = () => {
     </div>
   );
 
-  const blogPage = (
+  const blogListPage = (
     <div>
       <div className="Profile-Section">
         <ProfileCard darkMode={isDarkModeOn} />
@@ -86,7 +87,7 @@ const App = () => {
     </div>
   );
 
-  const projectPage = (
+  const projectListPage = (
     <div>
       <div className="Profile-Section">
         <ProfileCard darkMode={isDarkModeOn} />
@@ -99,6 +100,15 @@ const App = () => {
       </div>
     </div>
   );
+
+  // const blogReadPage = (
+  //   <div>
+  //     <BlogPostTitle />
+  //     <BlogPostDescription />
+  //     <BlogPostInformation />
+  //     <BlogPostBody />
+  //   </div>
+  // );
 
   let classArray = "App";
   if (isDarkModeOn)
@@ -108,11 +118,11 @@ const App = () => {
     <div className={classArray}>
       <Navbar clicked={navigateToHomePageHandler} darkMode={isDarkModeOn} toggler={toggleModeHandler} />
       {showHomePage && homePage}
-      {showBlogPage && blogPage}
-      {showProjectPage && projectPage}
+      {showBlogListPage && blogListPage}
+      {showProjectListPage && projectListPage}
       <Footer darkMode={isDarkModeOn} />
     </div>
-  )
+  );
 }
 
 

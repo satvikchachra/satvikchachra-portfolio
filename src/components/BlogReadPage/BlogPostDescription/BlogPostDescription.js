@@ -4,7 +4,7 @@ const BlogPostDescription = props => {
     return (
         <div>
             <p>
-                Blog post description
+                {props.desc}
             </p>
         </div>
     )

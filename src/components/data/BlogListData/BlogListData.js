@@ -7,7 +7,8 @@ const blogListData = [
         title: 'Blog Title 1',
         desc: 'Blog Post Description 1',
         date: 'December 12, 2020',
-        time: '4 min'
+        time: '4 min',
+        content: 'content 1'
     },
     {
         id: 'b2',
@@ -15,7 +16,8 @@ const blogListData = [
         title: 'Blog Title 2',
         desc: 'Blog Post Description 2',
         date: 'December 13, 2020',
-        time: '5 min'
+        time: '5 min',
+        content: 'content 2'
     },
 
 ];

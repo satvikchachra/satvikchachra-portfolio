@@ -23,6 +23,7 @@ const App = () => {
   const [showBlogListPage, setShowBlogListPage] = useState(false);
   const [showBlogReadPage, setShowBlogReadPage] = useState(false);
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
+  const [showBlogID, setShowBlogID] = useState(null);
 
   useEffect(() => {
     window.scrollTo({
@@ -66,7 +67,12 @@ const App = () => {
     setIsDarkModeOn(!isDarkModeOn);
   };
 
-  const blogReadPageHandler = () => {
+  const blogReadPageHandler = blogID => {
+
+    console.log(blogID);
+    // Set blog id to show that particular blog
+    setShowBlogID(blogID);
+
     setShowBlogReadPage(true);
     if (showHomePage)
       setShowHomePage(false);
@@ -100,7 +106,7 @@ const App = () => {
       {
         blogListArray.map(blogPost => (
           <div key={blogPost.id} className="Blog-Section">
-            <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={blogPost.pic} title={blogPost.title} desc={blogPost.desc} date={blogPost.date} time={blogPost.time} />
+            <BlogCard clicked={blogReadPageHandler.bind(this, blogPost.id)} darkMode={isDarkModeOn} pic={blogPost.pic} title={blogPost.title} desc={blogPost.desc} date={blogPost.date} time={blogPost.time} />
           </div>
         ))
       }
@@ -135,7 +141,7 @@ const App = () => {
   );
 
   const blogReadPage = (
-    <BlogReadPage />
+    <BlogReadPage id={showBlogID} />
   );
 
   let classArray = "App";

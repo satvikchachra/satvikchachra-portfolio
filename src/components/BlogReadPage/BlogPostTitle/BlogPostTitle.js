@@ -3,7 +3,7 @@ import React from 'react';
 const BlogTitle = props => {
     return (
         <div>
-            Blog Post Title
+            {props.title}
         </div>
     );
 }

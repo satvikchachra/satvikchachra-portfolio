@@ -8,10 +8,10 @@ const BlogPostInformation = props => {
                 <ProfileImage />
             </div>
             <div>
-                13 December 2020
+                {props.date}
             </div>
             <div>
-                4 min read
+                {props.time} read
             </div>
         </div>
     )

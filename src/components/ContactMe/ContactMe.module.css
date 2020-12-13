@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-button.ContactBtn{
+button.ContactBtn {
     border: 1px solid #bdbdc3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

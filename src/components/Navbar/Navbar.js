@@ -15,15 +15,24 @@ const Navbar = props => {
         toggleElement = (<FiSun color="#d2cecb" size="32px" />);
     }
 
+    const copyLinkHandler = () => {
+        const linkOfWebsite = "https://github.com/satvikchachra";
+        navigator.clipboard.writeText(linkOfWebsite).then(() => {
+            console.log('Async: Copying to clipboard was successful!');
+        }, (err) => {
+            console.error('Async: Could not copy text: ', err);
+        });
+    };
+
     return (
         <div className={classes.NavbarContainer}>
             <ul className={classes.NavLinks}>
                 <li onClick={() => props.clicked()} className={classes.Logo}>{homeElement}</li>
                 <li onClick={() => props.toggler()} className={classes.ToggleMode}>{toggleElement}</li>
-                <li className={classes.PortfolioLink}>{linkElement}</li>
+                <li onClick={() => copyLinkHandler()} className={classes.PortfolioLink}>{linkElement}</li>
             </ul>
         </div>
-    )
+    );
 };
 
 export default Navbar;

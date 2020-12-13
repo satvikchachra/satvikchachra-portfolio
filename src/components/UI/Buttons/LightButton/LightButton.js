@@ -3,9 +3,10 @@ import classes from './LightButton.module.css';
 
 const LightButton = props => {
     return (
-        <button className={classes.LightButton}>
-            <a href={props.githubURL} target="_blank" rel="noreferrer">View Code</a>
-        </button>
+        <div className={classes.LightButton}>
+            {/* <a href={props.githubURL} target="_blank" rel="noreferrer">View Code</a> */}
+            <p>View Code</p>
+        </div>
     )
 };
 

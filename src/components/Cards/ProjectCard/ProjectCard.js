@@ -25,8 +25,8 @@ const ProjectCard = props => {
                 </p>
 
                 <div className={classes.CardButtons}>
-                    <DarkButton hostedURL={props.hostedURL} />
-                    <LightButton githubURL={props.githubURL} />
+                    <a href={props.hostedURL} target="_blank" rel="noreferrer"><DarkButton hostedURL={props.hostedURL} /></a>
+                    <a style={{marginLeft: '20px'}} href={props.githubURL} target="_blank" rel="noreferrer"><LightButton githubURL={props.githubURL} /></a>
                 </div>
             </div >
         </div >

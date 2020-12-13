@@ -13,12 +13,13 @@ import Footer from './components/Footer/Footer';
 import WebsiteIllustration from './assets/illustration-black-website.svg';
 import BlogIllustration from './assets/illustration-black-blog.svg';
 import './App.css';
+import BlogReadPage from './components/BlogReadPage/BlogReadPage';
 
 const App = () => {
   const [showHomePage, setShowHomePage] = useState(true);
   const [showProjectListPage, setShowProjectListPage] = useState(false);
   const [showBlogListPage, setShowBlogListPage] = useState(false);
-  // const [showBlogReadPage, setShowBlogReadPage] = useState(false);
+  const [showBlogReadPage, setShowBlogReadPage] = useState(false);
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
 
   useEffect(() => {
@@ -35,6 +36,8 @@ const App = () => {
       setShowHomePage(false);
     if (showBlogListPage)
       setShowBlogListPage(false);
+    if (setShowBlogReadPage)
+      setShowBlogReadPage(false)
   };
 
   const navigateToBlogPageHandler = () => {
@@ -43,6 +46,8 @@ const App = () => {
       setShowHomePage(false);
     if (showProjectListPage)
       setShowProjectListPage(false);
+    if (setShowBlogReadPage)
+      setShowBlogReadPage(false)
   };
 
   const navigateToHomePageHandler = () => {
@@ -51,10 +56,22 @@ const App = () => {
       setShowBlogListPage(false);
     if (showProjectListPage)
       setShowProjectListPage(false);
+    if (setShowBlogReadPage)
+      setShowBlogReadPage(false)
   };
 
   const toggleModeHandler = () => {
     setIsDarkModeOn(!isDarkModeOn);
+  };
+
+  const blogReadPageHandler = () => {
+    setShowBlogReadPage(true);
+    if (showHomePage)
+      setShowHomePage(false);
+    if (showBlogListPage)
+      setShowBlogListPage(false);
+    if (showProjectListPage)
+      setShowProjectListPage(false);
   };
 
   const homePage = (
@@ -79,10 +96,10 @@ const App = () => {
         <ProfileCard darkMode={isDarkModeOn} />
       </div>
       <div className="Blog-Section">
-        <BlogCard darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
       <div className="Blog-Section">
-        <BlogCard darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
     </div>
   );
@@ -101,14 +118,9 @@ const App = () => {
     </div>
   );
 
-  // const blogReadPage = (
-  //   <div>
-  //     <BlogPostTitle />
-  //     <BlogPostDescription />
-  //     <BlogPostInformation />
-  //     <BlogPostBody />
-  //   </div>
-  // );
+  const blogReadPage = (
+    <BlogReadPage />
+  );
 
   let classArray = "App";
   if (isDarkModeOn)
@@ -120,6 +132,7 @@ const App = () => {
       {showHomePage && homePage}
       {showBlogListPage && blogListPage}
       {showProjectListPage && projectListPage}
+      {showBlogReadPage && blogReadPage}
       <Footer darkMode={isDarkModeOn} />
     </div>
   );

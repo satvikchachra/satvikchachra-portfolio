@@ -11,7 +11,7 @@ const BlogCard = props => {
         cardDateTimeClassArray = [classes.CardDateTime, classes.DarkCardDateTime].join(' ');
     }
     return (
-        <div className={cardDarkClassArray}>
+        <div onClick={() => props.clicked()} className={cardDarkClassArray}>
             <div className={classes.ImgContainer}>
                 <img alt="blog" src={props.pic} width="100%" />
             </div>

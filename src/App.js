@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './containers/Navbar/Navbar';
 import ProfileImage from './components/ProfileImage/ProfileImage';
 import NameHeader from './components/NameHeader/NameHeader';
 import BriefDescription from './components/BriefDescription/BriefDescription';

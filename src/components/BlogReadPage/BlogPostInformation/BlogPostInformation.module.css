@@ -1,0 +1,16 @@
+.Container {
+    display: flex;
+    margin: 20px 10px;
+    padding: 0px 30px;
+}
+
+.Date p, .Time p{
+    text-align: left;
+    margin: 7px 5px;
+    padding: 0;
+    font-size: 15px;
+}
+
+.Dark{
+    color: #c4b5b3;
+}

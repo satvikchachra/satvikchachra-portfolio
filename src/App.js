@@ -31,7 +31,7 @@ const App = () => {
       left: 0,
       behavior: 'smooth'
     });
-  }, [showHomePage, showProjectListPage, showBlogListPage]);
+  }, [showHomePage, showProjectListPage, showBlogListPage, showBlogReadPage]);
 
   const navigateToProjectPageHandler = () => {
     setShowProjectListPage(true);
@@ -110,12 +110,6 @@ const App = () => {
           </div>
         ))
       }
-      {/* <div className="Blog-Section">
-        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" desc="Personal blogs on web development." date="December 12, 2020" time="4 min" />
-      </div>
-      <div className="Blog-Section">
-        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" desc="Personal blogs on web development." date="December 12, 2020" time="4 min" />
-      </div> */}
     </div>
   );
 
@@ -131,17 +125,11 @@ const App = () => {
           </div>
         ))
       }
-      {/* <div className="Project-Section">
-        <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
-      </div>
-      <div className="Project-Section">
-        <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
-      </div> */}
     </div>
   );
 
   const blogReadPage = (
-    <BlogReadPage id={showBlogID} />
+    <BlogReadPage id={showBlogID} darkMode={isDarkModeOn} />
   );
 
   let classArray = "App";

@@ -1,0 +1,49 @@
+.CenterSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* margin: 40px 0px; */
+}
+
+@media (min-width: 769px) {
+    .CompleteBlog {
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .CompleteBlog {
+        width: 550px;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .CompleteBlog {
+        width: 450px;
+    }
+}
+
+@media (max-width: 540px) {
+    .CompleteBlog {
+        width: 400px;
+    }
+}
+
+@media (max-width: 426px) {
+    .CompleteBlog {
+        width: 330px;
+    }
+}
+
+@media (max-width: 376px) {
+    .CompleteBlog {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    .CompleteBlog {
+        width: 270px;
+    }
+}

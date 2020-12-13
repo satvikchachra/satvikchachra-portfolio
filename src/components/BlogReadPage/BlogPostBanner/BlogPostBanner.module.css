@@ -1,0 +1,9 @@
+.ImgContainer {
+    margin: 40px 0px 20px 0;
+    padding: 0px 30px;
+}
+
+.ImgContainer img{
+    width: 100%;
+    height: 150px;
+}

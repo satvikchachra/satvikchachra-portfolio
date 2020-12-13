@@ -1,0 +1,12 @@
+.Container {
+    text-align: left;
+}
+
+.Container p {
+    margin: 10px 10px;
+    padding: 0 30px;
+}
+
+.Dark{
+    color: #bdbdc3;
+}

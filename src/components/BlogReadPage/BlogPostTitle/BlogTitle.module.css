@@ -1,0 +1,13 @@
+.Title {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.Title h1{
+    margin: 0 10px;
+    padding: 0 30px;
+}
+
+.Dark{
+    color: #d3cecc;
+}

@@ -25,6 +25,14 @@
     margin-left: 30px;
 }
 
+.Dark {
+    color: #bdbdc3;
+}
+
+.Message {
+    position: relative;
+}
+
 @media (max-width: 1010px) {
     .NavbarContainer {
         padding: 50px 100px 0px 100px;

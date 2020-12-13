@@ -21,7 +21,7 @@ const ProjectCard = props => {
                     <h3 style={props.darkMode ? { color: "#d3cecc" } : null}>{props.title}</h3>
                 </div>
                 <p className={cardBodyClassArray}>
-                    Personal projects on web development.
+                    {props.body}
                 </p>
 
                 <div className={classes.CardButtons}>

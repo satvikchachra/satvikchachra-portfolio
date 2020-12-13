@@ -12,6 +12,8 @@ import ProjectCard from './components/Cards/ProjectCard/ProjectCard';
 import Footer from './components/Footer/Footer';
 import WebsiteIllustration from './assets/illustration-black-website.svg';
 import BlogIllustration from './assets/illustration-black-blog.svg';
+import blogListArray from './components/data/BlogListData/BlogListData';
+import projectListArray from './components/data/ProjectListData/ProjectListData';
 import './App.css';
 import BlogReadPage from './components/BlogReadPage/BlogReadPage';
 
@@ -95,12 +97,19 @@ const App = () => {
       <div className="Profile-Section">
         <ProfileCard darkMode={isDarkModeOn} />
       </div>
-      <div className="Blog-Section">
-        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+      {
+        blogListArray.map(blogPost => (
+          <div key={blogPost.id} className="Blog-Section">
+            <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={blogPost.pic} title={blogPost.title} desc={blogPost.desc} date={blogPost.date} time={blogPost.time} />
+          </div>
+        ))
+      }
+      {/* <div className="Blog-Section">
+        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" desc="Personal blogs on web development." date="December 12, 2020" time="4 min" />
       </div>
       <div className="Blog-Section">
-        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" body="Personal blogs on web development." date="December 12, 2020" time="4 min" />
-      </div>
+        <BlogCard clicked={blogReadPageHandler} darkMode={isDarkModeOn} pic={BlogIllustration} title="Blog Title" desc="Personal blogs on web development." date="December 12, 2020" time="4 min" />
+      </div> */}
     </div>
   );
 
@@ -109,12 +118,19 @@ const App = () => {
       <div className="Profile-Section">
         <ProfileCard darkMode={isDarkModeOn} />
       </div>
-      <div className="Project-Section">
+      {
+        projectListArray.map(project => (
+          <div key={project.id} className="Project-Section">
+            <ProjectCard darkMode={isDarkModeOn} pic={project.pic} title={project.title} body={project.body} hostedURL={project.hostedURL} githubURL={project.githubURL} />
+          </div>
+        ))
+      }
+      {/* <div className="Project-Section">
         <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
       </div>
       <div className="Project-Section">
         <ProjectCard darkMode={isDarkModeOn} pic={WebsiteIllustration} title="Project Title" body="Personal projects on web development." hostedURL="https://github.com/satvikchachra" githubURL="https://github.com/satvikchachra" />
-      </div>
+      </div> */}
     </div>
   );
 

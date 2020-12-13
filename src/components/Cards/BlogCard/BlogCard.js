@@ -20,7 +20,7 @@ const BlogCard = props => {
                     <h3 style={props.darkMode ? { color: "#d3cecc" } : null}>{props.title}</h3>
                 </div>
                 <p className={cardBodyClassArray}>
-                    {props.body}
+                    {props.desc}
                 </p>
 
                 <div className={cardDateTimeClassArray}>

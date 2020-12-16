@@ -19,7 +19,7 @@ const Navbar = props => {
 
     let msgClassArray = classes.Message;
     if (props.darkMode) {
-        msgClassArray = [classes.Message, classes.Dark].join(' ');
+        msgClassArray = [classes.Message, classes.DarkMsg].join(' ');
     }
 
     const copiedMessage = (
@@ -56,12 +56,13 @@ const Navbar = props => {
 
     return (
         <div className={classes.NavbarContainer}>
-            {showMessage.show ? copiedMessage : dummy}
             <ul className={classes.NavLinks}>
                 <li onClick={() => props.clicked()} className={classes.Logo}>{homeElement}</li>
                 <li onClick={() => props.toggler()} className={classes.ToggleMode}>{toggleElement}</li>
                 <li onClick={() => copyLinkHandler()} className={classes.PortfolioLink}>{linkElement}</li>
+                <li>{showMessage.show ? copiedMessage : dummy}</li>
             </ul>
+
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileImage from '../../ProfileImage/ProfileImage';
+import ProfileImage from '../../../ProfileImage/ProfileImage';
 import classes from './BlogPostInformation.module.css';
 
 const BlogPostInformation = props => {

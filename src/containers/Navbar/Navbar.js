@@ -26,10 +26,6 @@ const Navbar = props => {
         <div className={msgClassArray}>{showMessage.msg}</div>
     );
 
-    // const errorMessae = (
-    //     <div style={{ position: 'relative' }}>Error in copying!</div>
-    // );
-
     let homeElement = (<FiHexagon size="32px" />);
     let linkElement = (<GoLink size="32px" />);
     let toggleElement = (<BsMoon size="32px" />);

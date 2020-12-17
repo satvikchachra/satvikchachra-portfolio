@@ -1,4 +1,3 @@
-// import WebsiteIllustration from '../../../assets/illustration-black-website.svg'
 import projectPic1 from '../../../assets/projects/project1.svg';
 import projectPic2 from '../../../assets/projects/project2.svg';
 import projectPic3 from '../../../assets/projects/project3.png';

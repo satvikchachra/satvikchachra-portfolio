@@ -1,5 +1,4 @@
 import React from 'react';
-// import WebsiteIllustration from '../../../assets/illustration-black-website.svg';
 import DarkButton from '../../UI/Buttons/DarkButton/DarkButton';
 import LightButton from '../../UI/Buttons/LightButton/LightButton';
 import classes from './ProjectCard.module.css';

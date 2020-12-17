@@ -63,7 +63,7 @@ a {
     }
 }
 
-@media (max-width: 736px) and (min-width: 427px) {
+@media (max-width: 736px) and (min-width: 426px) {
     .Card {
         width: 340px;
         display: block;

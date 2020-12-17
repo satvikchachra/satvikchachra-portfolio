@@ -1,9 +1,15 @@
-.DisplayPicture{
+.DisplayPicture {
     box-shadow: 0px 0px 2px 2px #e5e4e2;
     border-radius: 50%;
 }
 
-.DisplayPictureContainer{
+.DisplayPictureContainer {
     margin: 40px 0px;
     padding: 0px 30px;
+}
+
+@media (max-width: 425px) {
+    .DisplayPictureContainer {
+        padding: 0 10px;
+    }
 }

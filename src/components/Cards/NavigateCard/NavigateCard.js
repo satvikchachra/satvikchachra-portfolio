@@ -28,11 +28,6 @@ const NavigateCard = props => {
                     {props.body}
                 </p>
             </div>
-            {/* <img src={BlogIllustration} height="300px" width="300px" />
-
-            Image<br />
-            Header<br />
-            Description */}
         </div>
     )
 };

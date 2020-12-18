@@ -43,6 +43,15 @@
     color: #c4b5b3;
 }
 
+/* 
+@media (max-width: 736px) {
+    .Card {
+        display: block;
+        width: 260px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+} */
+
 @media (max-width: 737px) {
     p.CardBody {
         width: 95%;
@@ -68,12 +77,3 @@
         width: 240px;
     }
 }
-
-/* 
-@media (max-width: 736px) {
-    .Card {
-        display: block;
-        width: 260px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-} */

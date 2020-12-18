@@ -13,7 +13,8 @@ const ProjectListPage = props => {
                     <div key={project.id} className="Project-Section">
                         <ProjectCard
                             darkMode={props.darkMode}
-                            pic={project.pic}
+                            lightPic={project.lightPic}
+                            darkPic={project.darkPic}
                             title={project.title}
                             body={project.body}
                             hostedURL={project.hostedURL}

@@ -5,14 +5,20 @@
     display: flex;
     padding: 10px;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .CardBody {
     width: 260px;
 }
 
+.ImgContainer {
+    padding: 10px 0;
+}
+
 .ImgContainer img {
     width: 260px;
+    height: 140px;
 }
 
 .CardDescription {
@@ -27,7 +33,7 @@
     color: #bdbdc3;
 }
 
-.DarkCard{
+.DarkCard {
     background-color: #292c34;
 }
 

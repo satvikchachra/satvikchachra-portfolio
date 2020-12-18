@@ -10,10 +10,14 @@ const ProjectCard = props => {
         cardBodyClassArray = [classes.CardBody, classes.DarkBody].join(' ');
         cardDarkClassArray = [classes.Card, classes.DarkCard].join(' ');
     }
+
+    const lightModePic = (<img alt="project" src={props.darkPic} />);
+    const darkModePic = (<img alt="project" src={props.lightPic} />);
+
     return (
         <div className={cardDarkClassArray}>
             <div className={classes.ImgContainer}>
-                <img alt="project" src={props.pic} width="100%" />
+                {props.darkMode ? darkModePic : lightModePic}
             </div>
             <div className={classes.CardDescription}>
                 <div className={classes.CardTitle}>
@@ -25,7 +29,7 @@ const ProjectCard = props => {
 
                 <div className={classes.CardButtons}>
                     <a href={props.hostedURL} target="_blank" rel="noreferrer"><DarkButton hostedURL={props.hostedURL} /></a>
-                    <a style={{marginLeft: '20px'}} href={props.githubURL} target="_blank" rel="noreferrer"><LightButton githubURL={props.githubURL} /></a>
+                    <a style={{ marginLeft: '20px' }} href={props.githubURL} target="_blank" rel="noreferrer"><LightButton githubURL={props.githubURL} /></a>
                 </div>
             </div >
         </div >

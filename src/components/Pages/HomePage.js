@@ -5,8 +5,12 @@ import BriefDescription from '../BriefDescription/BriefDescription';
 import ContactMe from '../ContactMe/ContactMe';
 import SocialProfiles from '../SocialProfiles/SocialProfiles';
 import NavigateCard from '../Cards/NavigateCard/NavigateCard';
-import WebsiteIllustration from '../../assets/illustration-black-website.svg';
-import BlogIllustration from '../../assets/illustration-black-blog.svg';
+import blackBlog from '../../assets/black_blog.svg';
+import whiteBlog from '../../assets/white_blog.svg';
+import blackProject from '../../assets/black_project.svg';
+import whiteProject from '../../assets/white_project.svg';
+// import WebsiteIllustration from '../../assets/illustration-black-website.svg';
+// import BlogIllustration from '../../assets/illustration-black-blog.svg';
 
 const HomePage = props => {
     return (
@@ -30,7 +34,8 @@ const HomePage = props => {
                     clicked={props.navigateToProject}
                     title="Projects"
                     body="Personal projects on web development."
-                    pic={WebsiteIllustration} />
+                    lightPic={whiteProject}
+                    darkPic={blackProject} />
 
             </div>
             <div className="Navigation-Section">
@@ -40,8 +45,8 @@ const HomePage = props => {
                     clicked={props.navigateToBlog}
                     title="Blogs"
                     body="Personal blogs on web development."
-                    pic={BlogIllustration} />
-
+                    lightPic={whiteBlog}
+                    darkPic={blackBlog} />
             </div>
         </div>
     )

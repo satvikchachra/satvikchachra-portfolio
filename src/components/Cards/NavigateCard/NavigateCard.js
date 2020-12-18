@@ -11,10 +11,14 @@ const NavigateCard = props => {
         titleClassArray = [classes.CardTitle, classes.DarkTitle].join(' ');
         bodyClassArray = [classes.CardBody, classes.DarkBody].join(' ');
     }
+
+    // const lightModePic = (<img alt="Navigation Section" src={props.lightPic} height='167px' width="100%" />);
+    const darkModePic = (<img alt="Navigation Section" src={props.darkPic} />);
+
     return (
         <div onClick={() => props.clicked()} className={cardClassesArray}>
             <div className={classes.ImgContainer}>
-                <img alt="Navigation Section" src={props.pic} width="100%" />
+                {darkModePic}
             </div>
             <div className={classes.CardDescription}>
                 <div className={titleClassArray}>
